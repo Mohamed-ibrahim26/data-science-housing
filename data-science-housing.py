@@ -2,7 +2,7 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
-df = pd.read_csv(r"C:\Users\HP\Desktop\data sciecs project\housing.csv")
+df = pd.read_csv("housing.csv")
 df.info()
 df["bedroom"] = df['bedroom'].str.strip()
 df["bedroom"] = pd.to_numeric(df['bedroom'], errors="coerce")
@@ -180,6 +180,7 @@ for i in df_new.columns:
 plt.xticks(range(len(variables)), variables, rotation=45, ha="right")
 plt.yticks(range(len(variables)), variables)
 df_new.info()
+
 
 
 
